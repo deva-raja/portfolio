@@ -1,0 +1,29 @@
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 35px;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  .heading {
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  .links {
+    display: flex;
+    width: 280px;
+    justify-content: flex-end;
+    width: 100%;
+    font-size: 16px;
+    & > * {
+      margin-left: 15px;
+    }
+    & > *:hover {
+      color: $primary-color;
+    }
+  }
+}

@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  padding: 35px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.header .heading {
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+
+.header .heading:hover {
+  color: #517ade;
+}
+
+.header .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 280px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  font-size: 16px;
+}
+
+.header .links > * {
+  margin-left: 15px;
+}
+
+.header .links > *:hover {
+  color: #517ade;
+}
+
+.landing-page {
+  background: black;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+  overflow: hidden;
+}
+
+.landing-page .content-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+}
+
+.landing-page .content-container .cta-container {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 120px;
+  padding-top: 160px;
+}
+
+.landing-page .content-container .cta-container h1 {
+  font-size: 82px;
+}
+
+.landing-page .content-container .cta-container .cta {
+  background: #517ade;
+  border-radius: 99px;
+  padding: 15px;
+  width: 250px;
+  margin-top: 18px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.landing-page .content-container .project-card-container {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-columns: 4% 86% 10%;
+      grid-template-columns: 4% 86% 10%;
+  display: -ms-grid;
+  display: grid;
+}
+
+.landing-page .content-container .project-card-container .project-card {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+}
+
+.landing-page .content-container .project-card-container .project-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.landing-page .content-container .project-card-container .project-card > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.landing-page .content-container .project-card-container .card:nth-child(2) img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 22%;
+     object-position: 22%;
+  min-height: 397.733px;
+}
+
+.landing-page .content-container .project-card-container .card {
+  height: 100%;
+  position: relative;
+}
+
+.landing-page .content-container .project-card-container .card:nth-child(1) {
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.landing-page .content-container .project-card-container .card:nth-child(1)::before {
+  -webkit-transform: translateY(-105px);
+          transform: translateY(-105px);
+}
+
+.landing-page .content-container .project-card-container .card:nth-child(2) {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.landing-page .content-container .project-card-container .card:nth-child(2)::before {
+  height: 90%;
+  -webkit-transform: translateY(-38px);
+          transform: translateY(-38px);
+}
+
+.landing-page .content-container .project-card-container .card:nth-child(3) {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.landing-page .content-container .project-card-container .card:nth-child(3)::before {
+  -webkit-transform: translateY(-35px);
+          transform: translateY(-35px);
+}
+
+.landing-page .content-container .project-card-container .card:nth-child(3)::after {
+  content: '';
+  position: absolute;
+  -webkit-transform: translateY(-125px);
+          transform: translateY(-125px);
+  top: 0;
+  right: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(white), to(transparent));
+  background: linear-gradient(transparent, white, transparent);
+  width: 2px;
+  height: 120%;
+}
+
+.landing-page .content-container .project-card-container .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(white), to(transparent));
+  background: linear-gradient(transparent, white, transparent);
+  width: 2px;
+  height: 90%;
+}
+
+.landing-page .content-container .project-card-container .card-content {
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px 15px;
+}
+
+.landing-page .content-container .project-card-container .card-content > * {
+  margin-bottom: 10px;
+}
+
+.landing-page .content-container .project-card-container .card-content .card-heading {
+  color: #517ade;
+  font-size: 16px;
+}
+
+.landing-page .content-container .project-card-container .card-content .card-subheading {
+  font-weight: 900;
+  font-size: 23px;
+}
+
+.landing-page .content-container .project-card-container .card-content .card-body {
+  color: grey;
+}
+
+.noice {
+  width: 100vw;
+  height: 100vh;
+  background: #0e2a47;
+  background: linear-gradient(225deg, #0e2a47 0%, #580e42 100%);
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

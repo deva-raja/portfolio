@@ -1,9 +1,10 @@
-  import './css/App.css';
+import './css/style.css';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   return (
-    <div className="App">
-      Portfolio testing
+    <div className='App'>
+      <LandingPage />
     </div>
   );
 }
