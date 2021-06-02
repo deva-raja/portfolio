@@ -29,6 +29,7 @@
         font-size: 16px;
         text-align: center;
         text-transform: uppercase;
+        font-weight: 900;
       }
     }
 
@@ -102,9 +103,10 @@
       .card-content {
         text-transform: uppercase;
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
         justify-content: space-between;
         padding: 15px 15px;
+        background-image: radial-gradient(circle at -80px -120px, $primary-color, transparent 62%);
         & > * {
           margin-bottom: 10px;
         }
@@ -118,6 +120,7 @@
         }
         .card-body {
           color: grey;
+          line-height: 22px;
         }
       }
     }
