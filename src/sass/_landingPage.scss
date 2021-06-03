@@ -5,11 +5,14 @@
   color: white;
   display: grid;
   grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
   overflow: hidden;
 
   .content-container {
     display: grid;
     grid-template-columns: 40% 60%;
+    grid-row: 2/3;
+
     // call to action section
     .cta-container {
       grid-column: 1/2;
@@ -36,8 +39,8 @@
     // project card section
     .project-card-container {
       grid-column: 2/3;
-      grid-template-columns: 4% 86% 10%;
       display: grid;
+      grid-template-columns: 4% 86% 10%;
       .project-card {
         grid-column: 2/3;
         display: flex;
@@ -61,19 +64,57 @@
       .card {
         height: 100%;
         position: relative;
+        cursor: pointer;
+        transition: all 1s;
+        $parent: &;
+
+        // all 3 cards linear border styling
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: linear-gradient(transparent, white, transparent);
+          width: 2px;
+          height: 90%;
+        }
+
+        // 1st card
         &:nth-child(1) {
           transform: translateY(20px);
           &::before {
             transform: translateY(-105px);
           }
+          &:hover {
+            & > .card-content {
+              background-image: radial-gradient(
+                circle at -80px -120px,
+                $primary-color,
+                transparent 80%
+              );
+            }
+          }
         }
+
+        // 2nd card
         &:nth-child(2) {
           transform: translateY(-30px);
           &::before {
             height: 90%;
-            transform: translateY(-38px);
+            transform: translateY(-68px);
+          }
+          &:hover {
+            & > .card-content {
+              background-image: radial-gradient(
+                circle at -80px -120px,
+                $primary-color,
+                transparent 80%
+              );
+            }
           }
         }
+
+        // 3rd card
         &:nth-child(3) {
           transform: translateY(50px);
           &::before {
@@ -89,21 +130,21 @@
             width: 2px;
             height: 120%;
           }
-        }
-        &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          background: linear-gradient(transparent, white, transparent);
-          width: 2px;
-          height: 90%;
+          &:hover {
+            & > .card-content {
+              background-image: radial-gradient(
+                circle at -80px -120px,
+                $primary-color,
+                transparent 80%
+              );
+            }
+          }
         }
       }
       .card-content {
         text-transform: uppercase;
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         justify-content: space-between;
         padding: 15px 15px;
         background-image: radial-gradient(circle at -80px -120px, $primary-color, transparent 62%);

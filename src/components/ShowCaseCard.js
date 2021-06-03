@@ -13,4 +13,4 @@ function ShowCaseCard({ img, txt1, txt2, txt3 }) {
   );
 }
 
-export default ShowCaseCard;
+export default ShowCaseCard; 

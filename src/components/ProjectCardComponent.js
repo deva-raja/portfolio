@@ -18,7 +18,7 @@ function ProjectCardComponent() {
           img={doctorImg}
           txt1='jwt auth'
           txt2='hospital app'
-          txt3='this is my best project,this is a mern stack hospital project with jwt authentication '
+          txt3='my best project,this is a mern stack hospital project with jwt authentication '
         />
         <ShowCaseCard
           img={stockImg}
