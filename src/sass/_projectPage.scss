@@ -12,7 +12,6 @@
   user-select: none;
 
   .container {
-    background: lightblue;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -35,9 +34,10 @@
   .deck > .cards {
     background-color: white;
     color: black;
-    background-size: 170% 100%;
+    // background-size: 100% 100%;
+    background-size: auto 85%;
     background-repeat: no-repeat;
-    // background-position: center center;
+    background-position: top center;
     width: 45vh;
     max-width: 300px;
     height: 95vh;
@@ -47,11 +47,6 @@
     box-shadow: 0 17px 30px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
     display: flex;
     flex-direction: column;
-    & > img {
-      // flex: 1;
-      height: 100%;
-      width: 100%;
-    }
     .card-btn-container {
       display: flex;
     }

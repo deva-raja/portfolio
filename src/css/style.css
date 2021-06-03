@@ -143,14 +143,6 @@ html {
           flex: 1;
 }
 
-.landing-page .content-container .project-card-container .card:nth-child(2) img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 22%;
-     object-position: 22%;
-  min-height: 397.733px;
-}
-
 .landing-page .content-container .project-card-container .card {
   height: 100%;
   position: relative;
@@ -296,7 +288,6 @@ html {
 }
 
 .project-page .container {
-  background: lightblue;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -334,8 +325,9 @@ html {
 .project-page .deck > .cards {
   background-color: white;
   color: black;
-  background-size: 170% 100%;
+  background-size: auto 85%;
   background-repeat: no-repeat;
+  background-position: top center;
   width: 45vh;
   max-width: 300px;
   height: 95vh;
@@ -351,11 +343,6 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.project-page .deck > .cards > img {
-  height: 100%;
-  width: 100%;
 }
 
 .project-page .deck > .cards .card-btn-container {
