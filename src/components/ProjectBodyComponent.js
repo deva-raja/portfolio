@@ -1,13 +1,8 @@
+import { animated, useSprings } from '@react-spring/web';
 import React, { useState } from 'react';
-import { useSprings, animated, to as interpolate } from '@react-spring/web';
 import { useDrag } from 'react-use-gesture';
 import CardComponent from './CardComponent';
-
-const cards = [
-  'https://upload.wikimedia.org/wikipedia/en/f/f5/RWS_Tarot_08_Strength.jpg',
-  'https://upload.wikimedia.org/wikipedia/en/5/53/RWS_Tarot_16_Tower.jpg',
-  'https://upload.wikimedia.org/wikipedia/en/9/9b/RWS_Tarot_07_Chariot.jpg',
-];
+import cards from '../data/data';
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = (i) => ({
@@ -53,20 +48,14 @@ function ProjectBodyComponent() {
         api.start((i) => to(i));
       }, 600);
   });
-  
-const AnimatedCard = animated(CardComponent);
+
+  console.log(props);
   return (
-    <div className='test'>
+    <div className='container'>
       {props.map(({ x, y, rot, scale }, i) => (
         <animated.div className='deck' key={i} style={{ x, y }}>
           {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
-          <animated.div
-            {...bind(i)}
-            style={{
-              transform: interpolate([rot, scale], trans),
-              backgroundImage: `url(${cards[i]})`,
-            }}
-          />
+          <CardComponent bind={bind} i={i} rot={rot} scale={scale} trans={trans} cards={cards[i]} />
         </animated.div>
       ))}
     </div>
