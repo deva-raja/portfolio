@@ -7,4 +7,63 @@
   grid-template-rows: auto 1fr;
   grid-template-columns: 1fr;
   overflow: hidden;
+  .content-container {
+    padding: 90px 100px;
+  }
+  .form-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+  }
+  .contact-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .img {
+    width: 80%;
+    height: 40%;
+  }
+
+  // form-icons
+  .form-image-icons {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+  }
+
+  // icons individual styling
+  // circles
+  .form-icon1 {
+    left: 70px;
+    top: 150px;
+    color: aqua;
+  }
+  .form-icon2 {
+    right: 180px;
+    bottom: 170px;
+    width: 17px;
+    height: 17px;
+    color: aqua;
+  }
+  // squre
+  .form-icon3 {
+    right: 280px;
+    top: 110px;
+    color: blueviolet;
+  }
+  // triangle
+  .form-icon4 {
+    right: 120px;
+    top: 150px;
+    color: #0bbeec;
+  }
+  // star
+  .form-icon5 {
+    left: 160px;
+    bottom: 120px;
+    color: #0bbeec;
+  }
 }

@@ -5,8 +5,10 @@ import FormImageComponent from './FormImageComponent';
 function ContactPageBodyComponent() {
   return (
     <div className='content-container'>
-      <FormImageComponent />
-      <FormComponent />
+      <div className='form-container'>
+        <FormImageComponent />
+        <FormComponent />
+      </div>
     </div>
   );
 }

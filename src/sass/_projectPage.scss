@@ -67,9 +67,12 @@
     .card-btn-container {
       display: flex;
       grid-row: 3/4;
+      & > button:nth-child(1) {
+        border-right: 2px solid grey;
+      }
       & > * {
         flex: 1;
-        border: 0.25px solid white;
+        border: none;
         outline: 0;
         background-color: $primary-color;
         background-color: black;

@@ -271,6 +271,76 @@ html {
   overflow: hidden;
 }
 
+.contact-page .content-container {
+  padding: 90px 100px;
+}
+
+.contact-page .form-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.contact-page .contact-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.contact-page .img {
+  width: 80%;
+  height: 40%;
+}
+
+.contact-page .form-image-icons {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+}
+
+.contact-page .form-icon1 {
+  left: 70px;
+  top: 150px;
+  color: aqua;
+}
+
+.contact-page .form-icon2 {
+  right: 180px;
+  bottom: 170px;
+  width: 17px;
+  height: 17px;
+  color: aqua;
+}
+
+.contact-page .form-icon3 {
+  right: 280px;
+  top: 110px;
+  color: blueviolet;
+}
+
+.contact-page .form-icon4 {
+  right: 120px;
+  top: 150px;
+  color: #0bbeec;
+}
+
+.contact-page .form-icon5 {
+  left: 160px;
+  bottom: 120px;
+  color: #0bbeec;
+}
+
 .project-page {
   background: black;
   width: 100%;
@@ -381,11 +451,15 @@ html {
   grid-row: 3/4;
 }
 
+.project-page .deck > .cards .card-btn-container > button:nth-child(1) {
+  border-right: 2px solid grey;
+}
+
 .project-page .deck > .cards .card-btn-container > * {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  border: 0.25px solid white;
+  border: none;
   outline: 0;
   background-color: #517ade;
   background-color: black;
