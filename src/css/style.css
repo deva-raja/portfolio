@@ -56,6 +56,10 @@ html {
   color: #517ade;
 }
 
+.header .active {
+  color: #517ade;
+}
+
 .landing-page {
   background: black;
   width: 100%;
@@ -325,30 +329,74 @@ html {
 .project-page .deck > .cards {
   background-color: white;
   color: black;
-  background-size: auto 85%;
-  background-repeat: no-repeat;
-  background-position: top center;
   width: 45vh;
   max-width: 300px;
   height: 95vh;
   max-height: 585px;
   will-change: transform;
   border-radius: 10px;
-  -webkit-box-shadow: 0 17px 30px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
-          box-shadow: 0 17px 30px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-shadow: 0 17px 15px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+          box-shadow: 0 17px 15px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 70% 20% 10%;
+      grid-template-rows: 70% 20% 10%;
+  text-align: center;
+}
+
+.project-page .deck > .cards .card-image-container {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  background-size: 100% 100%;
+}
+
+.project-page .deck > .cards .card-body-container {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  padding: 10px 12px 0;
+}
+
+.project-page .deck > .cards .card-body-container h2 {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  color: #517ade;
+}
+
+.project-page .deck > .cards .card-body-container p {
+  text-align: start;
+  color: grey;
+  text-transform: capitalize;
 }
 
 .project-page .deck > .cards .card-btn-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+.project-page .deck > .cards .card-btn-container > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 0.25px solid white;
+  outline: 0;
+  background-color: #517ade;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.project-page .deck > .cards .card-btn-container > *:hover {
+  color: #517ade;
+  cursor: pointer;
 }
 
 .about-page {

@@ -1,16 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function HeaderComponent() {
+  const location = useLocation();
+
+  console.log(location.pathname);
   return (
     <div className='header'>
       <Link to='/' className='heading'>
         Vinu's portfolio
       </Link>
       <div className='links'>
-        <Link to='/projects'>projects</Link>
-        <Link to='/about'>about me</Link>
-        <Link to='/contact'>contact</Link>
+        <Link to='/projects' className={`${location.pathname === '/projects' ? 'active' : ''}`}>
+          projects
+        </Link>
+        <Link to='/about' className={`${location.pathname === '/about' ? 'active' : ''}`}>
+          about me
+        </Link>
+        <Link to='/contact' className={`${location.pathname === '/contact' ? 'active' : ''}`}>
+          contact
+        </Link>
       </div>
     </div>
   );
