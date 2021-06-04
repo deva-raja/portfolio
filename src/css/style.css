@@ -283,6 +283,7 @@ html {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   height: 100%;
+  width: 100%;
 }
 
 .contact-page .contact-image-wrapper {
@@ -348,20 +349,104 @@ html {
   text-align: center;
 }
 
+.contact-page .form-container .form {
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-page .form-container .form h2 {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: white;
+  text-align: start;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  cursor: default;
+}
+
+.contact-page .form-container .form > * {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.contact-page .form-container .textArea {
+  resize: none;
+  font-size: 15px;
+  line-height: 1.5;
+  display: block;
+  padding: 0 10px 0 20px;
+  font-family: 'Lato', sans-serif;
+  padding: 0 10px 0 15px;
+  border: none;
+  background-color: black;
+  border-bottom: 1px solid white;
+  outline: none;
+  color: white;
+}
+
 .contact-page .form-container input {
   font-size: 15px;
   line-height: 1.5;
-  color: #666;
   display: block;
-  width: 50%;
-  background: #e6e6e6;
   height: 50px;
-  border-radius: 25px;
-  padding: 0 30px 0 68px;
+  padding: 0 10px 0 15px;
+  border: none;
+  outline: none;
+  background-color: black;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+.contact-page .form-container ::-webkit-input-placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+.contact-page .form-container :-ms-input-placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+.contact-page .form-container ::-ms-input-placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+.contact-page .form-container ::placeholder {
+  color: grey;
+  opacity: 1;
 }
 
 .contact-page .form-container button {
-  color: white;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  height: 50px;
+  border-radius: 999px;
+  width: 40%;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.contact-page .form-container button:hover {
+  color: #517ade;
+}
+
+.contact-page .form-container .error {
+  color: crimson;
+  text-align: start;
 }
 
 .project-page {
