@@ -275,7 +275,7 @@ html {
   padding: 90px 100px;
 }
 
-.contact-page .form-container {
+.contact-page .form-body-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr;
@@ -285,17 +285,20 @@ html {
   height: 100%;
 }
 
-.contact-page .contact-image {
+.contact-page .contact-image-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  height: 100%;
+  padding-top: 100px;
 }
 
 .contact-page .img {
@@ -304,41 +307,61 @@ html {
 }
 
 .contact-page .form-image-icons {
-  position: absolute;
+  position: relative;
   width: 22px;
   height: 22px;
 }
 
 .contact-page .form-icon1 {
-  left: 70px;
-  top: 150px;
+  left: -180px;
+  top: -10px;
   color: aqua;
 }
 
 .contact-page .form-icon2 {
-  right: 180px;
-  bottom: 170px;
+  right: -140px;
+  bottom: -20px;
   width: 17px;
   height: 17px;
   color: aqua;
 }
 
 .contact-page .form-icon3 {
-  right: 280px;
-  top: 110px;
+  right: -80px;
+  top: -50px;
   color: blueviolet;
 }
 
 .contact-page .form-icon4 {
-  right: 120px;
-  top: 150px;
+  right: -200px;
+  top: 18px;
   color: #0bbeec;
 }
 
 .contact-page .form-icon5 {
-  left: 160px;
-  bottom: 120px;
+  left: -160px;
+  bottom: -60px;
   color: #0bbeec;
+}
+
+.contact-page .form-container {
+  text-align: center;
+}
+
+.contact-page .form-container input {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666;
+  display: block;
+  width: 50%;
+  background: #e6e6e6;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px 0 68px;
+}
+
+.contact-page .form-container button {
+  color: white;
 }
 
 .project-page {

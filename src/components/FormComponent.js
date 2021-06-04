@@ -25,6 +25,7 @@ function FormComponent() {
       <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={ContactSchema}>
         {(isSubmitting) => (
           <Form>
+            <h2>Contact Me</h2>
             <Field type='name' name='name' />
             <ErrorMessage name='name' component='div' />
 

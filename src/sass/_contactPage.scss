@@ -10,17 +10,23 @@
   .content-container {
     padding: 90px 100px;
   }
-  .form-container {
+  .form-body-container {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     height: 100%;
   }
-  .contact-image {
+  //
+  //contact-form 3d image section
+  //
+  .contact-image-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     position: relative;
+    height: 100%;
+    // border: 1px solid red;
+    padding-top: 100px;
   }
   .img {
     width: 80%;
@@ -29,7 +35,7 @@
 
   // form-icons
   .form-image-icons {
-    position: absolute;
+    position: relative;
     width: 22px;
     height: 22px;
   }
@@ -37,33 +43,54 @@
   // icons individual styling
   // circles
   .form-icon1 {
-    left: 70px;
-    top: 150px;
+    left: -180px;
+    top: -10px;
     color: aqua;
   }
   .form-icon2 {
-    right: 180px;
-    bottom: 170px;
+    right: -140px;
+    bottom: -20px;
     width: 17px;
     height: 17px;
     color: aqua;
   }
   // squre
   .form-icon3 {
-    right: 280px;
-    top: 110px;
+    right: -80px;
+    top: -50px;
     color: blueviolet;
   }
   // triangle
   .form-icon4 {
-    right: 120px;
-    top: 150px;
+    right: -200px;
+    top: 18px;
     color: #0bbeec;
   }
   // star
   .form-icon5 {
-    left: 160px;
-    bottom: 120px;
+    left: -160px;
+    bottom: -60px;
     color: #0bbeec;
+  }
+
+  //
+  // form container
+  //
+  .form-container {
+    text-align: center;
+    input {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #666;
+      display: block;
+      width: 50%;
+      background: #e6e6e6;
+      height: 50px;
+      border-radius: 25px;
+      padding: 0 30px 0 68px;
+    }
+    button{
+      color: white;
+    }
   }
 }
