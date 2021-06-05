@@ -89,23 +89,28 @@
     grid-template-rows: 1fr;
     grid-template-columns: repeat(auto-fit, 400px);
     gap: 30px;
-    padding: 50px 120px 0px;
-    overflow: scroll;
+    padding: 50px 120px 50px;
+    overflow-y: scroll;
+    overflow-x: hidden;
     align-items: start;
     .tech-card {
       display: grid;
-      padding: 20px 20px;
+      padding: 20px;
       width: 100%;
-      height: 300px;
+      height: 200px;
       border-radius: 7px;
-      grid-template-columns: 1fr;
+      grid-template-columns: 400px;
       grid-template-rows: 20% 15% 65%;
       background-color: white;
       color: black;
-      img {
+      justify-content: center;
+      .img {
         grid-row: 1/2;
-        width: 100%;
-        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        img {
+          height: 100%;
+        }
       }
       .title {
         grid-row: 2/3;
@@ -120,7 +125,10 @@
         text-transform: capitalize;
         color: rgb(75, 74, 74);
         margin-top: 15px;
+        padding: 13px;
         text-align: center;
+        font-size: 16.5px;
+        line-height: 23px;
       }
     }
   }

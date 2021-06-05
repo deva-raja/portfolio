@@ -19,9 +19,8 @@ function AboutPage() {
   return (
     <div className='about-page'>
       <HeaderComponent />
-      {/* {page === 1 && <AboutPageBodyComponent setPage={setPage} />}
-      {page === 2 && <AboutProjectComponent setPage={setPage} />} */}
-      <AboutProjectComponent/>
+      {page === 1 && <AboutPageBodyComponent setPage={setPage} />}
+      {page === 2 && <AboutProjectComponent setPage={setPage} />}
     </div>
   );
 }
