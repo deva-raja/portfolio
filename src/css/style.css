@@ -115,6 +115,10 @@ html {
   font-weight: 900;
 }
 
+.landing-page .content-container .cta-container .cta:hover {
+  color: black;
+}
+
 .landing-page .content-container .project-card-container {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;

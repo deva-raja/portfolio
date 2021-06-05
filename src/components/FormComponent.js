@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { showToast } from '../redux/toastSlice';
 
 function FormComponent() {
+  const history = useHistory();
+  const dispatch = useDispatch();
+
   const [networkError, setNetworkError] = useState('');
   const initialValues = {
     name: '',
@@ -23,7 +29,9 @@ function FormComponent() {
     try {
       setNetworkError('');
       await axios.post(process.env.REACT_APP_FIREBASE_URL, mas);
-      return setSubmitting(false);
+      setSubmitting(false);
+      dispatch(showToast(true));
+      return history.push('/');
     } catch (error) {
       console.log(error);
       setNetworkError(error.message);
