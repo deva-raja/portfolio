@@ -1,7 +1,13 @@
-import React from 'react';
-import Typewriter from 'typewriter-effect';
+import { FaArrowRight } from 'react-icons/fa';
+import { useHistory } from 'react-router';
 
-function AboutPageBodyComponent() {
+function AboutPageBodyComponent({ setPage }) {
+  const history = useHistory();
+  const changePage = () => {
+    setPage(2);
+    history.push('/about');
+  };
+
   return (
     <div className='about-container'>
       <div className='about-story-wrapper'>
@@ -9,13 +15,21 @@ function AboutPageBodyComponent() {
           <h2>who am i</h2>
           <p>
             I am Vinu Devaraj,a web developer from Champakulam Allapuzha,my github handle is
-            @github.
+            <a
+              className='github'
+              target='_blank'
+              rel='noreferrer'
+              href='https://github.com/deva-raja/'
+            >
+              deva-raja <FaArrowRight className='about-icons' />
+            </a>
           </p>
         </div>
         <div className='about-what'>
           <h2>what did i study</h2>
           <p>
-            I studied B-TECH in Computer Science from College Of Engineering And Management Punnapra.
+            I studied B-TECH in Computer Science from College Of Engineering And Management
+            Punnapra.
           </p>
         </div>
         <div className='about-why'>
@@ -27,7 +41,12 @@ function AboutPageBodyComponent() {
         </div>
         <div className='about-project'>
           <h2>what technologies do i know</h2>
-          <p>Now,that's a whole another story</p>
+          <p>
+            Now,that"s a whole another
+            <span className='projects' onClick={() => changePage()}>
+              story <FaArrowRight className='about-icons' />
+            </span>
+          </p>
         </div>
       </div>
     </div>

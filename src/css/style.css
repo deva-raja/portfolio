@@ -675,6 +675,36 @@ html {
   grid-column: 2/3;
 }
 
+.about-page .github {
+  border-bottom: 2px solid rebeccapurple;
+  margin-left: 8px;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.about-page .github:hover {
+  border-bottom: 3px solid rebeccapurple;
+}
+
+.about-page .projects {
+  margin-left: 5px;
+  border-bottom: 1px solid greenyellow;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.about-page .projects:hover {
+  border-bottom: 2px solid greenyellow;
+  cursor: pointer;
+}
+
+.about-page .about-icons {
+  width: 15px;
+  height: 15px;
+}
+
 .noice {
   width: 100vw;
   height: 100vh;
