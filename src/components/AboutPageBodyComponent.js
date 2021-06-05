@@ -52,7 +52,7 @@ function AboutPageBodyComponent({ setPage }) {
         <div className='about-project'>
           <h2>what technologies do i know</h2>
           <p>
-            Now,that"s a whole another
+            Now,that's a whole another
             <animated.span style={styles} className='projects' onClick={() => changePage()}>
               story <FaArrowRight className='about-icons' />
             </animated.span>

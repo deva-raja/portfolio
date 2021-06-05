@@ -71,7 +71,7 @@ const tech = [
     img: figmaImg,
     title: 'figma',
     content:
-      'I have played around with figma,Adobe photoshop,Openshot etc but don"t have any true experience',
+      `I have played around with figma,Adobe photoshop,Openshot etc but don't have any true experience`,
   },
 
   {
