@@ -1,7 +1,17 @@
 import { FaArrowRight } from 'react-icons/fa';
 import { useHistory } from 'react-router';
+import { useSpring, animated } from '@react-spring/web';
 
 function AboutPageBodyComponent({ setPage }) {
+  const styles = useSpring({
+    loop: true,
+    to: [
+      {  color: '#acff2fb4' },
+      { color: '#acff2f' },
+    ],
+    from: { color: '#acff2f83' },
+  });
+
   const history = useHistory();
   const changePage = () => {
     setPage(2);
@@ -14,7 +24,7 @@ function AboutPageBodyComponent({ setPage }) {
         <div className='about-who'>
           <h2>who am i</h2>
           <p>
-            I am Vinu Devaraj,a web developer from Champakulam Allapuzha,my github handle is
+            I am Vinu Devaraj,a web developer from Champakulam Alapuzha,my github handle is
             <a
               className='github'
               target='_blank'
@@ -43,9 +53,9 @@ function AboutPageBodyComponent({ setPage }) {
           <h2>what technologies do i know</h2>
           <p>
             Now,that"s a whole another
-            <span className='projects' onClick={() => changePage()}>
+            <animated.span style={styles} className='projects' onClick={() => changePage()}>
               story <FaArrowRight className='about-icons' />
-            </span>
+            </animated.span>
           </p>
         </div>
       </div>

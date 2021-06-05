@@ -700,7 +700,8 @@ html {
 
 .about-page .about-story-container .projects:hover {
   cursor: pointer;
-  color: greenyellow;
+  border-bottom: 3px solid greenyellow;
+  color: #acff2f;
 }
 
 .about-page .about-story-container .about-icons {

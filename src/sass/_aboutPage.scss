@@ -74,7 +74,8 @@
       color: white;
       &:hover {
         cursor: pointer;
-        color: greenyellow;
+        border-bottom: 3px solid greenyellow;
+        color: #acff2f;
       }
     }
     .about-icons {
