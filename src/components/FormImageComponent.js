@@ -6,7 +6,7 @@ import { GiPlainCircle } from 'react-icons/gi';
 import { VscDebugStop } from 'react-icons/vsc';
 import { FiOctagon } from 'react-icons/fi';
 
-import Tilt from 'react-tilt';
+import Tilt from 'react-parallax-tilt';
 
 function FormImageComponent() {
   return (

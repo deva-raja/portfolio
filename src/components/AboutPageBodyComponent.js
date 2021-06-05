@@ -9,7 +9,7 @@ function AboutPageBodyComponent({ setPage }) {
   };
 
   return (
-    <div className='about-container'>
+    <div className='about-story-container'>
       <div className='about-story-wrapper'>
         <div className='about-who'>
           <h2>who am i</h2>
