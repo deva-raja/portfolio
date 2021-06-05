@@ -304,11 +304,13 @@ html {
   position: relative;
   height: 100%;
   padding-top: 100px;
+  position: relative;
+  right: 50px;
 }
 
 .contact-page .img {
-  width: 80%;
-  height: 40%;
+  width: 34.5vw;
+  height: 21vh;
 }
 
 .contact-page .form-image-icons {
@@ -597,6 +599,80 @@ html {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   overflow: hidden;
+}
+
+.about-page .about-story-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  height: 100%;
+  padding-top: 50px;
+}
+
+.about-page .about-story-wrapper > * {
+  padding-right: 100px;
+  text-align: start;
+}
+
+.about-page .about-story-wrapper > div:nth-child(1) {
+  padding-left: 100px;
+}
+
+.about-page .about-story-wrapper > div:nth-child(3) {
+  padding-left: 100px;
+}
+
+.about-page .about-story-wrapper h2 {
+  text-transform: uppercase;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #517ade;
+}
+
+.about-page .about-story-wrapper p {
+  font-size: 22px;
+  color: grey;
+  line-height: 31px;
+  word-spacing: 1px;
+}
+
+.about-page .about-who {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.about-page .about-what {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.about-page .about-why {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.about-page .about-project {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
 }
 
 .noice {

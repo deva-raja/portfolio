@@ -7,4 +7,49 @@
   grid-template-rows: auto 1fr;
   grid-template-columns: 1fr;
   overflow: hidden;
+  .about-story-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    height: 100%;
+    padding-top: 50px;
+    & > * {
+      padding-right: 100px;
+      text-align: start;
+    }
+    & > div:nth-child(1){
+      padding-left: 100px;
+    }
+    & > div:nth-child(3){
+      padding-left: 100px;
+    }
+    h2 {
+      text-transform: uppercase;
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: $primary-color;
+    }
+    p {
+      font-size: 22px;
+      color: grey;
+      line-height: 31px;
+      word-spacing: 1px;
+    }
+  }
+  .about-who {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  .about-what {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  .about-why {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  .about-project {
+    grid-row: 4/5;
+    grid-column: 2/3;
+  }
 }
