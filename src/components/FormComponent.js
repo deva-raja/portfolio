@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
+import axios from 'axios';
 
 function FormComponent() {
+  const [networkError, setNetworkError] = useState('');
   const initialValues = {
     name: '',
     email: '',
@@ -15,26 +17,27 @@ function FormComponent() {
     message: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!').required('Required'),
   });
 
-  const onSubmit = (values, { setSubmitting }) => {
-    // setSubmitting(true);
-    console.log(values);
-    // setSubmitting(false);
+  const onSubmit = async (values, { setSubmitting }) => {
+    setSubmitting(true);
+    const mas = JSON.stringify(values);
+    try {
+      setNetworkError('');
+      await axios.post(process.env.REACT_APP_FIREBASE_URL, mas);
+      return setSubmitting(false);
+    } catch (error) {
+      console.log(error);
+      setNetworkError(error.message);
+    }
   };
 
-  const CustomInputComponent = ({ ...props }) => (
-    <textarea
-      className='textArea'
-      {...props}
-      rows='4'
-      cols='50'
-      placeholder='Enter message'
-    ></textarea>
+  const CustomInputComponent = (props) => (
+    <textarea className='textArea' {...props} placeholder='Enter message'></textarea>
   );
 
   return (
     <div className='form-container'>
       <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={ContactSchema}>
-        {(isSubmitting) => (
+        {({ isSubmitting }) => (
           <Form className='form'>
             <Field type='input' name='name' placeholder='Enter name' />
             <ErrorMessage className='error' name='name' component='div' />
@@ -42,12 +45,13 @@ function FormComponent() {
             <Field type='email' name='email' placeholder='Enter email' />
             <ErrorMessage className='error' name='email' component='div' />
 
-            {/* <Field type='message' name='message' placeholder='Enter message' /> */}
             <Field name='message' as={CustomInputComponent} />
             <ErrorMessage className='error' name='message' component='div' />
 
-            {/* <button type='submit' disabled={isSubmitting}> */}
-            <button type='submit'>SUBMIT</button>
+            <button type='submit' disabled={isSubmitting}>
+              SUBMIT
+            </button>
+            {networkError && <div className='error'>{networkError}</div>}
             <h2>call me at 7559961738</h2>
           </Form>
         )}

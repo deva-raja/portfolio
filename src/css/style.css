@@ -377,7 +377,6 @@ html {
 
 .contact-page .form-container .form > * {
   margin-bottom: 10px;
-  text-transform: capitalize;
 }
 
 .contact-page .form-container .textArea {
@@ -385,6 +384,7 @@ html {
   font-size: 15px;
   line-height: 1.5;
   display: block;
+  height: 150px;
   padding: 0 10px 0 20px;
   font-family: 'Lato', sans-serif;
   padding: 0 10px 0 15px;

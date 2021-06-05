@@ -11,7 +11,7 @@ function HeaderComponent() {
         Vinu's portfolio
       </Link>
       <div className='links'>
-        <Link to='/projects' className={`${location.pathname === '/projects' ? 'active' : ''}`}>
+        <Link to='/projects' target='_blank' className={`${location.pathname === '/projects' ? 'active' : ''}`}>
           projects
         </Link>
         <Link to='/about' className={`${location.pathname === '/about' ? 'active' : ''}`}>

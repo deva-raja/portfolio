@@ -19,7 +19,7 @@ function CardComponent({ bind, i, rot, scale, trans, cards }) {
         <p>{cards.content}</p>
       </div>
       <div className='card-btn-container'>
-        <button onClick={() => console.log('it owrks ')}>view site</button>
+        <button onClick={() => console.log('it owrks ')}>view app</button>
         <button>view code</button>
       </div>
     </animated.div>
