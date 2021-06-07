@@ -5,10 +5,7 @@ import { useSpring, animated } from '@react-spring/web';
 function AboutPageBodyComponent({ setPage }) {
   const styles = useSpring({
     loop: true,
-    to: [
-      {  color: '#acff2fb4' },
-      { color: '#acff2f' },
-    ],
+    to: [{ color: '#acff2f' }, { color: '#acff2fb4' }],
     from: { color: '#acff2f83' },
   });
 
@@ -18,11 +15,17 @@ function AboutPageBodyComponent({ setPage }) {
     history.push('/about');
   };
 
+  const anim1 = useSpring({
+    from: { marginLeft: -520 },
+    to: { marginLeft: 0 },
+    delay: 85,
+  });
+
   return (
     <div className='about-story-container'>
       <div className='about-story-wrapper'>
         <div className='about-who'>
-          <h2>who am i</h2>
+          <animated.h2 style={anim1}>who am i</animated.h2>
           <p>
             I am Vinu Devaraj,a web developer from Champakulam Alapuzha,my github handle is
             <a
@@ -36,21 +39,21 @@ function AboutPageBodyComponent({ setPage }) {
           </p>
         </div>
         <div className='about-what'>
-          <h2>what did i study</h2>
+          <animated.h2 style={anim1}>what did i study</animated.h2>
           <p>
             I studied B-TECH in Computer Science from College Of Engineering And Management
             Punnapra.
           </p>
         </div>
         <div className='about-why'>
-          <h2>why should you hire me</h2>
+          <animated.h2 style={anim1}>why should you hire me</animated.h2>
           <p>
             I am Hardworking, Smart, kind of Creative and am quick to learn new technologies.I am
             100% confident that I can provide actual value to the company.
           </p>
         </div>
         <div className='about-project'>
-          <h2>what technologies do i know</h2>
+          <animated.h2 style={anim1}>what technologies do i know</animated.h2>
           <p>
             Now,that's a whole another
             <animated.span style={styles} className='projects' onClick={() => changePage()}>

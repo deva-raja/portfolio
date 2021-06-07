@@ -19,8 +19,12 @@ function CardComponent({ bind, i, rot, scale, trans, cards }) {
         <p>{cards.content}</p>
       </div>
       <div className='card-btn-container'>
-        <button onClick={() => console.log('it owrks ')}>view app</button>
-        <button>view code</button>
+          <a href={cards.site} className='card' target='_blank' rel='noreferrer'>
+            view app
+          </a>
+          <a href={cards.git} className='card' target='_blank' rel='noreferrer'>
+            view code
+          </a>
       </div>
     </animated.div>
   );

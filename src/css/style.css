@@ -101,6 +101,7 @@ html {
 
 .landing-page .content-container .cta-container h1 {
   font-size: 82px;
+  word-spacing: -8px;
 }
 
 .landing-page .content-container .cta-container .cta {
@@ -566,7 +567,19 @@ html {
   grid-row: 3/4;
 }
 
-.project-page .deck > .cards .card-btn-container > button:nth-child(1) {
+.project-page .deck > .cards .card-btn-container > a {
+  width: 100%;
+  height: 100%;
+  padding: 17px;
+  font-size: 15px;
+}
+
+.project-page .deck > .cards .card-btn-container > a:hover {
+  color: #517ade;
+  cursor: pointer;
+}
+
+.project-page .deck > .cards .card-btn-container > a:nth-child(1) {
   border-right: 2px solid grey;
 }
 
@@ -581,11 +594,6 @@ html {
   color: white;
   text-transform: uppercase;
   font-weight: 900;
-}
-
-.project-page .deck > .cards .card-btn-container > *:hover {
-  color: #517ade;
-  cursor: pointer;
 }
 
 .about-page {

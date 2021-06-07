@@ -67,7 +67,17 @@
     .card-btn-container {
       display: flex;
       grid-row: 3/4;
-      & > button:nth-child(1) {
+      & > a {
+        width: 100%;
+        height: 100%;
+        padding: 17px;
+        font-size: 15px;
+        &:hover {
+          color: $primary-color;
+          cursor: pointer;
+        }
+      }
+      & > a:nth-child(1) {
         border-right: 2px solid grey;
       }
       & > * {
@@ -79,10 +89,6 @@
         color: white;
         text-transform: uppercase;
         font-weight: 900;
-        &:hover {
-          color: $primary-color;
-          cursor: pointer;
-        }
       }
     }
   }

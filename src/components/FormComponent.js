@@ -3,12 +3,23 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { showToast } from '../redux/toastSlice';
+import { useEffect } from 'react';
+import { useRef } from 'react';
+import { setFocus } from '../redux/focusSlice';
 
 function FormComponent() {
   const history = useHistory();
   const dispatch = useDispatch();
+  const shouldFocus = useSelector((state) => state.focus.shouldFocus);
+  const formRef = useRef(null);
+
+  console.log(formRef.current);
+  
+  useEffect(() => {
+    dispatch(setFocus(false));
+  }, [shouldFocus, dispatch]);
 
   const [networkError, setNetworkError] = useState('');
   const initialValues = {
@@ -47,7 +58,12 @@ function FormComponent() {
       <Formik initialValues={initialValues} onSubmit={onSubmit} validationSchema={ContactSchema}>
         {({ isSubmitting }) => (
           <Form className='form'>
-            <Field type='input' name='name' placeholder='Enter name' />
+            <Field
+              type='input'
+              name='name'
+              placeholder='Enter name'
+              autoFocus={shouldFocus ? true : false}
+            />
             <ErrorMessage className='error' name='name' component='div' />
 
             <Field type='email' name='email' placeholder='Enter email' />
