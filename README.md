@@ -2,6 +2,10 @@
 
 ## Available Scripts
 
+ Live Portfolio - [vinu-devaraj-portfolio](https://vinu-devaraj-portfolio.pages.dev/)
+
+## Available Scripts
+
 In the project directory, you can run:
 
 ### `yarn start`
