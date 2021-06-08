@@ -6,6 +6,8 @@
   display: grid;
   grid-template-rows: auto 1fr;
   grid-template-columns: 1fr;
+  // overflow-x: hidden;
+  // overflow-y: scroll;
   overflow: hidden;
 
   // 1st part story
@@ -84,6 +86,19 @@
     }
   }
 
+  @media only screen and (max-height: 700px) {
+    .about-story-container {
+      .about-story-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        height: 70%;
+        padding-top: 5px;
+        // overflow-y: scroll;
+      }
+    }
+  }
+
   // 2nd part about-project-container
   .about-project-container {
     display: grid;
@@ -130,6 +145,31 @@
         text-align: center;
         font-size: 16.5px;
         line-height: 23px;
+      }
+    }
+  }
+
+  @media only screen and (max-height: 700px) {
+    .about-project-container {
+      padding: 50px 65px 50px;
+      grid-template-columns: repeat(auto-fit, 380px);
+      .tech-card {
+        .content {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-height: 620px) {
+    .about-project-container {
+      padding: 50px 44px 50px;
+      grid-template-columns: repeat(auto-fit, 370px);
+
+      .tech-card {
+        .content {
+          font-size: 15.5px;
+        }
       }
     }
   }
