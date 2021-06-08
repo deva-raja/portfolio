@@ -163,4 +163,51 @@
       }
     }
   }
+
+  @media only screen and (max-height: 700px) {
+    .content-container {
+      .cta-container {
+        padding-left: 75px;
+      }
+
+      .project-card-container {
+        .project-card {
+          img {
+            height: 55%;
+          }
+        }
+        .card-content {
+          .card-heading {
+            font-size: 15px;
+          }
+          .card-subheading {
+            font-size: 20px;
+          }
+          .card-body {
+            color: grey;
+            line-height: 21px;
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-height: 630px) {
+    .content-container {
+      .project-card-container {
+        .card-content {
+          .card-heading {
+            margin-bottom: 7px;
+          }
+          .card-body {
+            color: grey;
+            line-height: 21px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  // prettier ignore
 }

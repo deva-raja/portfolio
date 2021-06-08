@@ -262,6 +262,36 @@ html {
   line-height: 22px;
 }
 
+@media only screen and (max-height: 700px) {
+  .landing-page .content-container .cta-container {
+    padding-left: 75px;
+  }
+  .landing-page .content-container .project-card-container .project-card img {
+    height: 55%;
+  }
+  .landing-page .content-container .project-card-container .card-content .card-heading {
+    font-size: 15px;
+  }
+  .landing-page .content-container .project-card-container .card-content .card-subheading {
+    font-size: 20px;
+  }
+  .landing-page .content-container .project-card-container .card-content .card-body {
+    color: grey;
+    line-height: 21px;
+  }
+}
+
+@media only screen and (max-height: 630px) {
+  .landing-page .content-container .project-card-container .card-content .card-heading {
+    margin-bottom: 7px;
+  }
+  .landing-page .content-container .project-card-container .card-content .card-body {
+    color: grey;
+    line-height: 21px;
+    font-size: 14px;
+  }
+}
+
 .contact-page {
   background: black;
   width: 100%;
