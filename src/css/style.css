@@ -717,6 +717,7 @@ html {
 .about-page .about-story-container .github {
   border-bottom: 2px solid rebeccapurple;
   margin-left: 8px;
+  margin-right: 8px;
   letter-spacing: 1px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -725,6 +726,19 @@ html {
 
 .about-page .about-story-container .github:hover {
   color: rebeccapurple;
+}
+
+.about-page .about-story-container .linkedIn {
+  border-bottom: 2px solid #14e2e2;
+  margin-left: 8px;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: white;
+}
+
+.about-page .about-story-container .linkedIn:hover {
+  color: #14e0e0;
 }
 
 .about-page .about-story-container .projects {
@@ -757,6 +771,12 @@ html {
         grid-template-rows: repeat(4, 1fr);
     height: 70%;
     padding-top: 5px;
+  }
+}
+
+@media only screen and (max-height: 630px) {
+  .about-page .about-story-container .about-story-wrapper {
+    overflow-y: scroll;
   }
 }
 

@@ -27,14 +27,23 @@ function AboutPageBodyComponent({ setPage }) {
         <div className='about-who'>
           <animated.h2 style={anim1}>who am i</animated.h2>
           <p>
-            I am Vinu Devaraj,a web developer from Champakulam Alapuzha,my github handle is
+            I am Vinu Devaraj,a web developer from Champakulam Alappuzha,my github handle is
             <a
               className='github'
               target='_blank'
               rel='noreferrer'
               href='https://github.com/deva-raja/'
             >
-              deva-raja <FaArrowRight className='about-icons' />
+              deva-raja <FaArrowRight className='about-icons' /> 
+            </a>
+              and my linkedIn profile is 
+            <a
+              className='linkedIn'
+              target='_blank'
+              rel='noreferrer'
+              href='https://www.linkedin.com/in/vinu-devaraj/'
+            >
+              vinu-devaraj <FaArrowRight className='about-icons' />
             </a>
           </p>
         </div>

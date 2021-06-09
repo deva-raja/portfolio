@@ -60,11 +60,22 @@
     .github {
       border-bottom: 2px solid rebeccapurple;
       margin-left: 8px;
+      margin-right: 8px;
       letter-spacing: 1px;
       transition: all 0.2s;
       color: white;
       &:hover {
         color: rebeccapurple;
+      }
+    }
+    .linkedIn {
+      border-bottom: 2px solid rgb(20, 226, 226);
+      margin-left: 8px;
+      letter-spacing: 1px;
+      transition: all 0.2s;
+      color: white;
+      &:hover {
+        color: rgb(20, 224, 224);
       }
     }
 
@@ -95,6 +106,13 @@
         height: 70%;
         padding-top: 5px;
         // overflow-y: scroll;
+      }
+    }
+  }
+  @media only screen and (max-height: 630px) {
+    .about-story-container {
+      .about-story-wrapper {
+        overflow-y: scroll;
       }
     }
   }
