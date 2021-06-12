@@ -34,9 +34,9 @@ function AboutPageBodyComponent({ setPage }) {
               rel='noreferrer'
               href='https://github.com/deva-raja/'
             >
-              deva-raja <FaArrowRight className='about-icons' /> 
+              deva-raja <FaArrowRight className='about-icons' />
             </a>
-              and my linkedIn profile is 
+            and my linkedIn profile is
             <a
               className='linkedIn'
               target='_blank'
@@ -57,8 +57,8 @@ function AboutPageBodyComponent({ setPage }) {
         <div className='about-why'>
           <animated.h2 style={anim1}>why should you hire me</animated.h2>
           <p>
-            I am Hardworking, Smart, kind of Creative and am quick to learn new technologies.I am
-            100% confident that I can provide actual value to the company.
+            Experience in all levels of web development including designing, creating, and deploying
+            websites.I am 100% confident that I can provide actual value to the company
           </p>
         </div>
         <div className='about-project'>
